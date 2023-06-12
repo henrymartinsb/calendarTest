@@ -1,0 +1,23 @@
+<h1>Add event</h1>
+<mat-dialog-content>
+    <form [formGroup]="eventForm">
+        <div class="form-group">
+            <label for="title" class="form-label">Title:</label>
+            <input id="title" class="form-control" type="text" formControlName="Title" maxlength="165">
+        </div>
+        <div class="form-group">
+            <label for="duration" class="form-label">
+                Duration in minutes:
+            </label>
+            <input type="duration" class="form-control" type="number" formControlName="Duration" min="0">
+        </div>
+        <div class="form-group">
+            <label for="description" class="form-label"> Description:</label>
+            <textarea id="description" class="form-control" formControlName="Description"></textarea>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="cancel" mat-button mat-dialog-close>Cancel</button>
+    <button class="create" mat-button mat-dialog-close (click)="InsertEvent()">Add</button>
+</mat-dialog-actions>

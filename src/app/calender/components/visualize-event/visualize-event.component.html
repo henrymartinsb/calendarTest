@@ -1,0 +1,10 @@
+<h1>{{ selectedEvent.Title }}</h1>
+<mat-dialog-content>
+    <p>Begins at: {{ selectedEvent.Date.toLocaleString() }} {{ hour }}</p>
+    <p>Ends at: {{ endTime.toLocaleString() }} {{ hour }}</p>
+    <p>Description: <br>{{ selectedEvent.Description }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button class="cancel" mat-button mat-dialog-close (click)="DeleteEvent()">Delete</button>
+    <button class="back" mat-button mat-dialog-close>Back</button>
+</mat-dialog-actions>
